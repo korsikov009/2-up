@@ -29,6 +29,8 @@
   &__menu-reference {
     color: #0d3351;
 
+    transition: 0.15s;
+
     &:hover {
       color: #13b0e9;
     }
@@ -38,6 +40,9 @@
   }
 
   &__feedback {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
     padding-top: 3px;
   }
 
@@ -74,6 +79,8 @@
 
     background-color: #0d3351;
     border-radius: 50%;
+
+    transition: 0.15s;
 
     &:hover {
       background-color: #13b0e9;
