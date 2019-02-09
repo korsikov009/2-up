@@ -35,24 +35,7 @@
   }
 
   &__anchor {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0 auto;
-    width: 202px;
-    height: 47px;
 
-    font-size: 14px;
-    color: #fff;
-
-    background-color: #33c7fd;
-
-    &:hover {
-      background-color: #13b0e9;
-    }
-    &:active {
-      background-color: #64d6ff;
-    }
   }
 }
 

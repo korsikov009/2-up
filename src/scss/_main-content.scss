@@ -4,7 +4,7 @@
   &__container {
     padding: {
       top: 107px;
-      bottom: 50px;
+      bottom: 63px;
     }
   }
 
@@ -42,10 +42,35 @@
       }
     }
   }
+
+  &__more-cruises {
+    border: none;
+
+    letter-spacing: 0.8px;
+
+    cursor: pointer;
+
+    &:after {
+      position: relative;
+      top: 1px;
+      left: 10px;
+
+      display: block;
+      content: '';
+
+      border-top: 5px solid #fff;
+      border-bottom: 5px solid rgba(0,0,0,0);
+      border-left: 4px solid rgba(0,0,0,0);
+      border-right: 4px solid rgba(0,0,0,0);
+      transform: translateY(25%);
+    }
+  }
 }
 
+
+
 .catalog {
-  padding: 42px 0;
+  padding: 42px 0 5px;
 
   &:after {
     display: table;
@@ -60,6 +85,8 @@
     margin-bottom: 20px;
   }
 }
+
+
 
 .cruise {
   background-color: #fff;
