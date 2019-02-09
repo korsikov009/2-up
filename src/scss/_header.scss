@@ -1,0 +1,194 @@
+.header {
+  //height: 500px;
+  background: url('/img/backgrounds/header-bg.png') no-repeat 50% 50%;
+  background-size: cover;
+
+  &__container {
+    padding-bottom: 196px;
+  }
+
+  &__logo {
+    width: 88px;
+    height: 88px;
+    margin: 3px auto;
+
+    img {
+      width: 100%;
+      height: 100%
+    }
+  }
+
+  &__title {
+    margin-top: 0;
+    margin-bottom: 15px;
+
+    letter-spacing: 2px;
+  }
+
+  &__text {
+    display: block;
+    margin-bottom: 30px;
+
+    font-size: 100px;
+    font-family: "Roboto Slab", sans-serif;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: -2.5px;
+    color: #0d3351;
+  }
+
+  &__anchor {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    width: 202px;
+    height: 47px;
+
+    font-size: 14px;
+    color: #fff;
+
+    background-color: #33c7fd;
+
+    &:hover {
+      background-color: #13b0e9;
+    }
+    &:active {
+      background-color: #64d6ff;
+    }
+  }
+}
+
+.navigation {
+  display: flex;
+  align-items: center;
+  min-height: 84px;
+
+
+  &__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: -5px;
+    padding: 5px;
+
+
+    background: none;
+    border: none;
+
+    // active button
+    &.navigation__button_active {
+      .navigation__burger{
+        &-element {
+          opacity: 0;
+          width: 0;
+        }
+
+        &:before {
+          transform: rotate(45deg);
+          top: -1px;
+        }
+
+        &:after {
+          transform: rotate(-45deg);
+          bottom: -1x;
+        }
+      }
+    }
+  }
+
+  &__burger {
+    position: relative;
+
+    width: 21px;
+    height: 16px;
+
+    &:before, &:after, &-element {
+      position: absolute;
+
+      width: 100%;
+      height: 2px;
+
+      background-color: #0d3351;
+      transform-origin: left center;
+
+      transition: 0.3s;
+    }
+
+    &:before, &:after {
+      display: block;
+      content: '';
+    }
+
+    &:before {
+      top: 0;
+      transform: rotate(0);
+    }
+
+    &:after {
+      bottom: 0;
+      transform: rotate(0);
+    }
+
+    &-element {
+      top: calc(50% - 1px);
+    }
+  }
+
+  &__group {
+    margin-left: auto;
+    display: flex;
+  }
+
+  &__item {
+    margin-left: 35px;
+    padding-top: 5px;
+
+    img {
+      display: block;
+      width: 10px;
+      height: 12px;
+      margin-bottom: 2px;
+    }
+
+    &:not(:last-child) {
+      display: flex;
+      align-items: center;
+
+      &:after{
+        display: block;
+        content: '';
+
+        border-top: 5px solid #0d3351;
+        border-bottom: 5px solid rgba(0,0,0,0);
+        border-left: 4px solid rgba(0,0,0,0);
+        border-right: 4px solid rgba(0,0,0,0);
+        transform: translateY(25%);
+      }
+    }
+
+    &-text {
+      margin: 0 8px;
+
+      font-size: 15px;
+    }
+  }
+
+  &__phone {
+    display: block;
+
+    font-weight: bold;
+    font-size: 14px;
+    font-family: "Raleway";
+    color: #0d3351;
+
+    &-label {
+      display: block;
+
+      font-size: 12px;
+      font-family: "Raleway";
+      color: #0d3351;
+
+    }
+  }
+}

@@ -7,7 +7,7 @@ var notify            = require("gulp-notify");
 var mqpacker          = require('css-mqpacker');//структуризация медиа запросов
 var cssnano           = require('cssnano');
 var inlineSvg         = require('postcss-inline-svg');//https://github.com/TrySound/postcss-inline-svg
-var wait              = require('gulp-wait');
+// var wait              = require('gulp-wait');
 var browserSync = require('browser-sync')
 
 var plugins = [
@@ -22,7 +22,7 @@ var plugins = [
 
 gulp.task('sass', function () {
   return gulp.src('src/scss/**/*.scss')
-    .pipe(wait(500))
+    // .pipe(wait(500))
     .pipe( sass().on( 'error', notify.onError(
 			{
 			  message: "<%= error.message %>",
