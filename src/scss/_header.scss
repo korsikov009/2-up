@@ -4,7 +4,7 @@
   background-size: cover;
 
   &__container {
-    padding-bottom: 196px;
+    padding-bottom: 195px;
   }
 
   &__logo {
@@ -19,15 +19,12 @@
   }
 
   &__title {
-    margin-top: 0;
-    margin-bottom: 15px;
-
-    letter-spacing: 2px;
+    margin-bottom: 16px;
   }
 
   &__text {
     display: block;
-    margin-bottom: 30px;
+    margin-bottom: 32px;
 
     font-size: 100px;
     font-family: "Roboto Slab", sans-serif;
