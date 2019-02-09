@@ -46,3 +46,28 @@ body {
     background-color: #64d6ff;
   }
 }
+
+.phone {
+  &-number {
+    display: block;
+
+    font-weight: bold;
+    font-size: 14px;
+    font-family: "Raleway";
+    color: #0d3351;
+
+    &:hover {
+      color: #13b0e9;
+    }
+    &:active {
+      color: #64d6ff;
+    }
+  }
+
+  &-label {
+    display: block;
+
+    font-size: 12px;
+    color: #0d3351;
+  }
+}
