@@ -1,0 +1,137 @@
+.modal-background {
+  position: fixed;
+  z-index: 100;
+
+  display: flex;
+
+  width: 100%;
+  height: 100%;
+
+  background-color: rgba(0,0,0,0.5);
+}
+
+.modal {
+  position: relative;
+
+  @include row_grid(15px);
+  margin: auto;
+  padding: 118px 34px 88px;
+  width: 850px;
+
+  background-color: #fff;
+
+  &__close {
+    position: absolute;
+    top: 17px;
+    right: 28px;
+
+    padding: 5px;
+
+    font-weight: 500;
+    font-size: 20px;
+    color: #8699a8;
+
+    transform: scaleX(1.1);
+
+    cursor: pointer;
+
+  }
+
+  &__gallery {
+    @include col_grid(6, 15px);
+  }
+
+  &__gallery-main {
+    position: relative;
+
+    width: 100%;
+    margin-bottom: 8px;
+    padding-top: 66.5%;
+
+    overflow: hidden;
+
+    img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+
+      max-width: 100%;
+      display: block;
+
+      transform: translate(-50%, -50%)
+    }
+  }
+
+  &__gallery-container {
+    @include row_grid(4px);
+  }
+
+  &__gallery-item {
+    @include col_grid(3, 4px);
+
+    overflow: hidden;
+  }
+
+  &__gallery-image {
+    position: relative;
+
+    padding-top: calc(66.2%);
+    img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+
+      max-width: 100%;
+      display: block;
+
+      transform: translate(-50%, -50%)
+    }
+  }
+
+  &__info {
+    @include col_grid(6, 15px);
+  }
+
+  &__cruise {
+    display: block;
+    margin-top: -3px;
+    margin-bottom: 38px;
+
+    font-size: 18px;
+    font-family: "Roboto Slab", sans-serif;
+    line-height: 1;
+    letter-spacing: 0.8px;
+    color: #00a2dd;
+  }
+
+  &__route {
+    margin-bottom: 8px;
+  }
+
+  &__schedule {
+    padding-bottom: 15px;
+  }
+
+  &__schedule-title {
+    display: block;
+    margin-bottom: 5px;
+
+    font-weight: bold;
+  }
+
+  &__schedule-container {
+    p {
+      margin-top: 0;
+      margin-bottom: 0;
+      line-height: 1.8;
+    }
+  }
+
+  &__price {
+    margin-bottom: 15px;
+  }
+
+  &__reference {
+    margin: 0;
+  }
+}
