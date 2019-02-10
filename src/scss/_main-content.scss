@@ -89,7 +89,60 @@
 
 
 .cruise {
+  position: relative;
+
   background-color: #fff;
+
+  &__special {
+    position: absolute;
+    right: 30px;
+    top: -10px;
+
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 90px;
+    height: 82px;
+
+    color: #fff;
+
+    &:after {
+      position: absolute;
+      bottom: 0;
+
+      display: block;
+      content: '';
+
+      border-top: none;
+      border-bottom: 20px solid rgba(0,0,0,0);
+      border-left: 45px solid rgba(0,0,0,0);
+      border-right: 45px solid rgba(0,0,0,0);
+
+      transform: translateY(100%);
+    }
+
+    &_hit {
+      display: flex;
+
+      background-color: #33c7fd;
+      &:after {
+        border-left-color: #33c7fd;
+        border-right-color: #33c7fd;
+      }
+
+    }
+
+    &_sale{
+      display: flex;
+
+      background-color: #f20542;
+      &:after {
+        border-left-color: #f20542;
+        border-right-color: #f20542;
+      }
+    }
+
+  }
 
   &__image {
     img {
