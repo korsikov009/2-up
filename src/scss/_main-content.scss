@@ -103,7 +103,11 @@
     align-items: center;
     width: 90px;
     height: 82px;
+    padding: 10px 5px 5px;
 
+    text-transform: uppercase;
+    line-height: 1.286;
+    text-align: center;
     color: #fff;
 
     &:after {
