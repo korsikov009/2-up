@@ -10,6 +10,34 @@
     @include media(1199px) {
       padding-bottom: 208px;
     }
+
+    &:after {
+      position: absolute;
+      bottom: -95px;
+      left: calc(50% - 8px);
+
+      display: block;
+      content: '';
+      height: 275px;
+      width: 61px;
+
+      background-image: url("../img/pictures/dotted-line.svg");
+
+      transform: translate(-50%, 0);
+      overflow: hidden;
+
+
+      @include media(1199px) {
+        bottom: -45px;
+        left: calc(50% - 10px);
+
+        height: 228px;
+        width: 50px;
+
+
+        background-image: url("../img/pictures/dotted-line-tablet.svg");
+      }
+    }
   }
 
   &__main {
@@ -37,6 +65,10 @@
 
   &__title {
     margin-bottom: 16px;
+
+    @include media(1199px) {
+      margin-bottom: 0;
+    }
   }
 
   &__text {
@@ -56,37 +88,6 @@
       font-size: 72px;
       line-height: 1.1;
       letter-spacing: -2px;
-    }
-  }
-
-  &__dotted-line {
-    position: absolute;
-    bottom: -95px;
-    left: calc(50% - 8px);
-
-    height: 275px;
-    width: 61px;
-
-    background-image: url("../img/pictures/dotted-line.svg");
-
-    transform: translate(-50%, 0);
-    overflow: hidden;
-
-    @include media(1199px) {
-      bottom: -45px;
-      left: calc(50% - 10px);
-
-      height: 228px;
-      width: 50px;
-
-
-      background-image: url("../img/pictures/dotted-line-tablet.svg");
-    }
-
-    img {
-      @include media(1199px) {
-        height: 103%;
-      }
     }
   }
 }

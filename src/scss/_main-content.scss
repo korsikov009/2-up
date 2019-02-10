@@ -6,6 +6,12 @@
       top: 107px;
       bottom: 63px;
     }
+
+    @include media(1199px) {
+      padding: {
+        top: 55px;
+      }
+    }
   }
 
   &__title {
@@ -63,6 +69,10 @@
       border-left: 4px solid rgba(0,0,0,0);
       border-right: 4px solid rgba(0,0,0,0);
       transform: translateY(25%);
+
+      @include media(1199px) {
+        left: 14px;
+      }
     }
   }
 }
@@ -72,17 +82,30 @@
 .catalog {
   padding: 42px 0 5px;
 
+  @include row_grid(15px);
+  display: block;
+
+  @include media(1199px) {
+    display: flex;
+    padding: 35px 0 0;
+  }
+
   &:after {
     display: table;
     content: '';
     clear: both;
   }
-  @include row_grid(15px);
-  display: block;
+
   &__item {
     float: left;
+
     @include col_grid(6, 15px);
     margin-bottom: 20px;
+
+    @include media(1199px) {
+      float: none;
+      margin-bottom: 25px;
+    }
   }
 }
 
@@ -93,10 +116,16 @@
 
   background-color: #fff;
 
+  @include media(1199px) {
+    display: flex;
+    flex-direction: column;
+  }
+
   &__special {
     position: absolute;
-    right: 30px;
-    top: -10px;
+    right: 44px;
+    top: -7px;
+    z-index: 10;
 
     display: none;
     justify-content: center;
@@ -109,6 +138,10 @@
     line-height: 1.286;
     text-align: center;
     color: #fff;
+
+    @include media(1199px) {
+      right: 33px;
+    }
 
     &:after {
       position: absolute;
@@ -149,8 +182,26 @@
   }
 
   &__image {
+
+    @include media(1199px) {
+      position: relative;
+
+      padding-top: 78.8%;
+
+    }
     img {
       display: block;
+
+      @include media(1199px) {
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        width: 100%;
+        height: 100%;
+
+        object-fit: cover;
+      }
     }
   }
 
@@ -159,6 +210,11 @@
     flex-direction: column;
     align-items: flex-start;
     padding: 24px 38px 37px;
+
+    @include media(1199px) {
+      flex-grow: 1;
+      padding: 24px 30px 37px;
+    }
   }
 
   &__reference {
@@ -173,8 +229,12 @@
 
     transition: 0.15s;
 
+    @include media(1199px) {
+      display: block;
+    }
+
     &:hover:after {
-      transform: translatex(5px);
+      transform: translatex(5px) scaleX(0.7);
     }
 
     &:active {
@@ -198,12 +258,33 @@
       border-right: 5px solid rgba(0,0,0,0);
 
       transition: 0.2s;
+
+      @include media(1199px) {
+        position: relative;
+        bottom: 2px;
+
+        content: '\25ba';
+        display: inline-block;
+        margin-top: 0;
+
+        border: none;
+
+        font-size: 11px;
+
+        transform: scaleX(0.7);
+      }
     }
   }
 
   &__route, &__time {
     margin-top: 0;
     margin-bottom: 10px;
+
+    @include media(1199px) {
+      margin-bottom: 0;
+
+      line-height: 1.7;
+    }
 
     &-key {
       font-weight: bold;
@@ -212,6 +293,10 @@
 
   &__time {
     margin-bottom: 15px;
+
+    @include media(1199px) {
+      margin-bottom: 10px;
+    }
   }
 
   &__price {

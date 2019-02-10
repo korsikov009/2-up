@@ -33,8 +33,6 @@ body {
   color: #0d3351;
 
   @include media(1199px) {
-    margin-bottom: 0;
-
     font-size: 26px;
     letter-spacing: 1px;
   }
