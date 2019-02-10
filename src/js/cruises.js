@@ -66,6 +66,21 @@ const cruises = [
     }
 ];
 
+if (window.outerWidth < 1200) {
+    const arrayOfMobileImage = [
+        'img/pictures/lighthouse-mobile.png',
+        'img/pictures/sochi-mobile.png',
+        'img/pictures/gelendjik-mobile.png',
+        'img/pictures/novorossiysk-mobile.png'
+    ];
+    cruises.pop();
+    cruises.forEach((element, i)=> {
+        element.image = arrayOfMobileImage[i];
+    });
+
+    console.log(cruises);
+}
+
 document.addEventListener('DOMContentLoaded', ()=> {
     const cruise = document.querySelector('.cruise');
     const cruisesList = document.querySelector('.catalog');

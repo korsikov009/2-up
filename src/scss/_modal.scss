@@ -4,7 +4,7 @@
   bottom: 0;
   left: 0;
   right: 0;
-  z-index: 100;
+  z-index: 1000;
 
   display: none;
 
@@ -21,6 +21,23 @@
   margin: auto;
   padding: 118px 34px 88px;
   width: 850px;
+
+  @include media(1199px) {
+    width: 720px;
+    padding: 98px 34px 75px;
+  }
+
+  @include media(767px) {
+    width: 500px;
+    margin: 0 auto;
+    padding: 70px 20px 50px;
+
+    overflow-y: auto;
+  }
+
+  @include media(575px) {
+    padding: 70px 10px 50px;
+  }
 
   background-color: #fff;
 
@@ -43,6 +60,10 @@
 
   &__gallery {
     @include col_grid(6, 15px);
+
+    @include media(767px) {
+      @include col_grid(12,15px);
+    }
   }
 
   &__gallery-main {
@@ -74,7 +95,8 @@
   }
 
   &__gallery-item {
-    @include col_grid(3, 4px);
+    flex-grow: 1;
+    margin: 0 4px;
 
     overflow: hidden;
   }
@@ -101,6 +123,11 @@
 
   &__info {
     @include col_grid(6, 15px);
+
+    @include media(767px) {
+      @include col_grid(12, 15px);
+      padding-top: 30px;
+    }
   }
 
   &__cruise {
@@ -113,6 +140,10 @@
     line-height: 1.3;
     letter-spacing: 0.8px;
     color: #00a2dd;
+
+    @include media(1199px) {
+      margin-bottom: 10px;
+    }
   }
 
   &__route, &__time {
@@ -157,7 +188,6 @@
 
 body.modal_open {
   position: fixed;
-  overflow: hidden;
   width: 100%;
   height: 100%;
 }
