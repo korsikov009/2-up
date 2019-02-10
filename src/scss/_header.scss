@@ -34,7 +34,6 @@
         height: 228px;
         width: 50px;
 
-
         background-image: url("../img/pictures/dotted-line-tablet.svg");
       }
     }
@@ -43,6 +42,10 @@
   &__main {
     @include media(1199px) {
       padding-top: 55px;
+    }
+
+    @include media(575px) {
+      padding-top: 0;
     }
   }
 
@@ -69,6 +72,10 @@
     @include media(1199px) {
       margin-bottom: 0;
     }
+
+    @include media(575px) {
+      margin-bottom: 10px;
+    }
   }
 
   &__text {
@@ -89,6 +96,13 @@
       line-height: 1.1;
       letter-spacing: -2px;
     }
+
+    @include media(575px) {
+      margin-bottom: 35px;
+
+      font-size: 50px;
+      line-height: 1;
+    }
   }
 }
 
@@ -101,6 +115,10 @@
   align-items: center;
   min-height: 84px;
 
+  @include media(575px) {
+    min-height: 70px;
+    margin: 0 -15px -45px;
+  }
 
   &__button {
     display: flex;
@@ -114,9 +132,20 @@
 
     cursor: pointer;
 
+    @include media(575px) {
+      margin-left: 15px;
+      z-index: 100;
+    }
+
     // active button
     &.navigation__button_active {
       .navigation__burger{
+        &-element, &:before, &:after {
+          @include media(575px) {
+            background-color: #fff;
+          }
+        }
+        
         &-element {
           opacity: 0;
           width: 0;
@@ -176,6 +205,10 @@
   &__group {
     margin-left: auto;
     display: flex;
+
+    @include media(575px) {
+      display: none;
+    }
   }
 
   &__item {
@@ -184,6 +217,12 @@
 
     &:not(:last-child) {
       cursor: pointer;
+    }
+
+    &:not(.navigation__feedback) {
+      @include media(767px) {
+        display: none;
+      }
     }
 
     img {
@@ -223,7 +262,7 @@
   position: absolute;
   left: 0;
   top: 60px;
-  z-index: 10;
+  z-index: 100;
 
   width: 0;
 
@@ -238,9 +277,18 @@
     top: 65px;
   }
 
+  @include media(575px) {
+    height: 100vh;
+    top: 0;
+  }
+
   &.menu_visible {
     width: 420px;
     opacity: 1;
+
+    @include media(575px) {
+      width: 100%;
+    }
   }
 
 
@@ -249,6 +297,10 @@
     flex-direction: column;
     align-items:flex-start;
     padding: 64px 45px 54px;
+
+    @include media(575px) {
+      padding: 120px 20px 50px;
+    }
   }
 
   &__item {

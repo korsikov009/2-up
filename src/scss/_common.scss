@@ -19,6 +19,13 @@ body {
       right: 24px;
     }
   }
+
+  @include media(575px) {
+    padding: {
+      left: 15px;
+      right: 15px;
+    }
+  }
 }
 
 .title {
@@ -35,6 +42,10 @@ body {
   @include media(1199px) {
     font-size: 26px;
     letter-spacing: 1px;
+  }
+
+  @include media(575px) {
+    font-size: 20px;
   }
 }
 
