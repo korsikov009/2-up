@@ -77,8 +77,6 @@ if (window.innerWidth < 1200) {
     cruises.forEach((element, i)=> {
         element.image = arrayOfMobileImage[i];
     });
-
-    console.log(cruises);
 }
 
 document.addEventListener('DOMContentLoaded', ()=> {
