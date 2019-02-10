@@ -6,12 +6,28 @@
   &__container {
     padding-bottom: 195px;
     position: relative;
+
+    @include media(1199px) {
+      padding-bottom: 208px;
+    }
+  }
+
+  &__main {
+    @include media(1199px) {
+      padding-top: 55px;
+    }
   }
 
   &__logo {
     width: 88px;
     height: 88px;
     margin: 3px auto;
+
+    @include media(1199px) {
+      width: 70px;
+      height: 70px;
+      margin: 3px auto 8px;
+    }
 
     img {
       width: 100%;
@@ -33,6 +49,14 @@
     text-transform: uppercase;
     letter-spacing: -2.5px;
     color: #0d3351;
+
+    @include media(1199px) {
+      margin-bottom: 12px;
+
+      font-size: 72px;
+      line-height: 1.1;
+      letter-spacing: -2px;
+    }
   }
 
   &__dotted-line {
@@ -41,10 +65,29 @@
     left: calc(50% - 8px);
 
     height: 275px;
+    width: 61px;
 
-    transform: translateX(-50%);
+    background-image: url("../img/pictures/dotted-line.svg");
+
+    transform: translate(-50%, 0);
     overflow: hidden;
 
+    @include media(1199px) {
+      bottom: -45px;
+      left: calc(50% - 10px);
+
+      height: 228px;
+      width: 50px;
+
+
+      background-image: url("../img/pictures/dotted-line-tablet.svg");
+    }
+
+    img {
+      @include media(1199px) {
+        height: 103%;
+      }
+    }
   }
 }
 
@@ -166,7 +209,7 @@
     }
 
     &-text {
-      margin: 0 8px;
+      margin: 0 7px;
 
       font-size: 15px;
     }
@@ -189,7 +232,6 @@
   transition: width 0.3s, opacity 0.5s;
 
   overflow: hidden;
-
 
   &.menu_visible {
     width: 420px;

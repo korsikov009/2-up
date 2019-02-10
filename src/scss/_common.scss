@@ -10,7 +10,15 @@ body {
   padding: {
     left: 30px;
     right: 30px;
-  };
+  }
+
+  @include media(1199px) {
+    max-width: 768px;
+    padding: {
+      left: 24px;
+      right: 24px;
+    }
+  }
 }
 
 .title {
@@ -23,6 +31,13 @@ body {
   text-align: center;
   letter-spacing: 2px;
   color: #0d3351;
+
+  @include media(1199px) {
+    margin-bottom: 0;
+
+    font-size: 26px;
+    letter-spacing: 1px;
+  }
 }
 
 .button {
@@ -71,7 +86,7 @@ body {
   &-label {
     display: block;
 
-    font-size: 12px;
+    font-size: 11px;
     color: #0d3351;
   }
 }
