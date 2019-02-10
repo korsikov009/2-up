@@ -1,6 +1,6 @@
 const cruises = [
     {
-        id:'sochi',
+        id:'anapa',
         name: 'Морской круиз в Анапу',
         reference: '#',
         price: '49 000 руб.',
