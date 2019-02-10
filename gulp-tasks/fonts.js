@@ -12,7 +12,7 @@ gulp.task('ttf2woff', function(){
 gulp.task('ttf2woff2', function(){
     return gulp.src(['src/fonts/*.ttf'])
         .pipe(ttf2woff2())
-        .pipe(gulp.dest('dist/fonts/fontsWoff'));
+        .pipe(gulp.dest('src/fonts/fontsWoff'));
 });
 
 // gulp.task('fonts', function () {
