@@ -25,11 +25,11 @@ document.addEventListener('DOMContentLoaded', () => {
         modalBackground.classList.remove('modal_show');
     }
 
-    function fillTheModal(target) {
+    function fillTheModal(id) {
         let arrayOfImages = [];
 
         cruises.forEach((element, i, array)=>{
-            if (element.id === target.getAttribute('id')) {
+            if (element.id === id) {
                 modal.querySelector('.modal__gallery-main img').setAttribute('src', element.image);
                 modal.querySelector('.modal__cruise').textContent = element.name;
                 modal.querySelector('.cruise__route-value').textContent = element.route;
@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 modal.querySelector('.modal__schedule-container').innerHTML = element.description;
                 modal.querySelector('.cruise__price-actual').textContent = element.price;
             }
-            if (element.id !== target.getAttribute('id')) {
+            if (element.id !== id) {
                 const imageClone = modal.querySelector('.modal__gallery-item').cloneNode(true);
                 imageClone.setAttribute('data-id', element.id);
                 imageClone.querySelector('.modal__gallery-image img').setAttribute('src', element.image);
@@ -57,11 +57,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
     modalBackground.addEventListener('click', function(event) {
         let target = event.target;
+
         while (target !== this) {
+
+            if (target && target.classList.contains('modal__gallery-item')) {
+                fillTheModal(target.getAttribute('data-id'));
+            }
+
             if (target === modal) {
                 return;
             }
-            target = target.parentNode;
+            if (target) {
+                target = target.parentNode
+            } else {
+                return;
+            }
         }
         modalHide();
     });
@@ -77,7 +87,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
 
             if (target.classList.contains('cruise')) {
-                fillTheModal(target);
+                fillTheModal(target.getAttribute('id'));
             }
             target = target.parentNode;
         }
