@@ -20,6 +20,10 @@
 
   &__menu-list {
     margin-right: 160px;
+
+    @include media(1199px) {
+      margin-right: 80px;
+    }
   }
 
   &__menu-item {
