@@ -234,6 +234,10 @@
 
   overflow: hidden;
 
+  @include media(1199px) {
+    top: 65px;
+  }
+
   &.menu_visible {
     width: 420px;
     opacity: 1;
