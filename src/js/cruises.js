@@ -66,7 +66,7 @@ const cruises = [
     }
 ];
 
-if (window.outerWidth < 1200) {
+if (window.innerWidth < 1200) {
     const arrayOfMobileImage = [
         'img/pictures/lighthouse-mobile.png',
         'img/pictures/sochi-mobile.png',
