@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Морские прогулки</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="modal-background">
+    <div class="modal">
+        <div class="modal__close">X</div>
+        <div class="modal__gallery">
+            <div class="modal__gallery-main">
+                <img src="img/pictures/lighthouse.png" alt="">
+            </div>
+            <ul class="modal__gallery-container">
+                <li class="modal__gallery-item">
+                    <div class="modal__gallery-image">
+                        <img src="img/pictures/lighthouse.png" alt="">
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="modal__info">
+            <span class="modal__cruise">Морской круиз в Анапу</span>
+            <p class="modal__route cruise__route"><span class="cruise__route-key">Маршрут: </span><span class="cruise__route-value">Сочи-Лазаревское-Геленджик-Анапа</span></p>
+            <p class="modal__time cruise__time"><span class="cruise__time-key">Продолжительность: </span><span class="cruise__time-value">10 ч. 0 мин.</span></p>
+            <div class="modal__schedule">
+                <span class="modal__schedule-title">Расписание:</span>
+                <div class="modal__schedule-container">
+                    <p>Отправление из Сочи: ежедневно в 10:00, 11:40, 13:20, 15:00, 16:40</p>
+                    <p>Отправление из Абрау-Дюрсо: ежедневно в 12:25, 14:05, 15:45, 17:25, 19:05</p>
+                    <p>Продолжительность: 11 часов 0 мин., из которых 10 часов - морская прогулка (туда и обратно), от 1 часа 30 мин. - свободное время в Ласточкином гнезде</p>
+                    <p>Причал отправления/прибытия: набережная Ленина, причал №8, теплоход "Азов"</p>
+                </div>
+            </div>
+            <div class="modal__price cruise__price"><span class="cruise__price-actual">49 000 руб.</span></div>
+            <a href="#" class="button modal__reference">Бронировать</a>
+        </div>
+    </div>
+</div>
+<header class="header">
+    <div class="container header__container">
+        <nav class="navigation">
+            <div class="menu">
+                <ul class="menu__list">
+                    <li class="menu__item">
+                        <a href="#" class="menu__reference">Популярный маршруты</a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="#" class="menu__reference">Расписание рейсов</a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="#" class="menu__reference">Забронированные рейсы</a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="#" class="menu__reference">Вход для партнеров</a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="#" class="menu__reference">О компании</a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="#" class="menu__reference">Контакты</a>
+                    </li>
+                </ul>
+            </div>
+            <button class="navigation__button">
+                <div class="navigation__burger">
+                    <div class="navigation__burger-element"></div>
+                </div>
+            </button>
+            <div class="navigation__group">
+                <div class="navigation__item">
+                    <img src="img/icons/user.svg" alt="user">
+                    <span class="navigation__item-text">Личный кабинет</span>
+                </div>
+                <div class="navigation__item">
+                    <img src="img/icons/valute.svg" alt="user">
+                    <span class="navigation__item-text">Рубль</span>
+                </div>
+                <div class="navigation__item">
+                    <span class="navigation__item-text">Ru</span>
+                </div>
+                <div class="navigation__item navigation__feedback">
+                    <a href="tel:88005006105" class="phone-number navigation__phone">8 800 500-61-05</a>
+                    <span class="phone-label navigation__phone-label">Круглосуточная поддержка</span>
+                </div>
+            </div>
+        </nav>
+        <main class="header__main">
+            <div class="header__logo">
+                <img src="img/icons/logo.png" alt="logo">
+            </div>
+            <h2 class="title header__title">Морские прогулки</h2>
+            <span class="header__text">По черному морю</span>
+            <a href="#main-content__title" class="button header__anchor">Выбрать круиз</a>
+        </main>
+    </div>
+</header>
+<main class="main-content">
+    <div class="container main-content__container">
+        <h2 class="title main-content__title" id="main-content__title">Каталог круизов</h2>
+        <span class="main-content__sort">Сортировать круизы по <span class="main-content__sort-item">цене</span></span>
+        <ul class="catalog">
+            <li class="catalog__item cruise" id="example-cruise">
+                <div class="cruise__image">
+                    <div class="cruise__special"><span class="cruise__special-text"></span></div>
+                    <img src="img/pictures/lighthouse.png" alt="lighthouse">
+                </div>
+                <div class="cruise__description">
+                    <a href="#" class="cruise__reference">Морской круиз в Анапу</a>
+                    <p class="cruise__route"><span class="cruise__route-key">Маршрут: </span><span class="cruise__route-value">Сочи-Лазаревское-Геленджик-Анапа</span></p>
+                    <p class="cruise__time"><span class="cruise__time-key">Продолжительность: </span><span class="cruise__time-value">10 ч. 0 мин.</span></p>
+                    <div class="cruise__price"><span class="cruise__price-actual">49 000 руб.</span><span class="cruise__price-old"></span></div>
+                </div>
+            </li>
+        </ul>
+        <button class="button main-content__more-cruises">Больше круизов</button>
+    </div>
+</main>
+<footer class="footer">
+    <div class="container footer__container">
+        <ul class="footer__list">
+            <li class="footer__item footer__menu">
+                <ul class="footer__menu-list">
+                    <li class="footer__menu-item">
+                        <a href="#" class="footer__menu-reference">Вход для партнеров</a>
+                    </li>
+                    <li class="footer__menu-item">
+                        <a href="#" class="footer__menu-reference">О компании</a>
+                    </li>
+                    <li class="footer__menu-item">
+                        <a href="#" class="footer__menu-reference">Контакты</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="footer__item">
+                <div class="footer-social">
+                    <span class="footer-social__title">Будь на связи:</span>
+                    <ul class="footer-social__list">
+                        <li class="footer-social__item">
+                            <a href="#" class="footer-social__reference">
+                                <img src="img/icons/vk.png" alt="vk">
+                            </a>
+                        </li>
+                        <li class="footer-social__item">
+                            <a href="#" class="footer-social__reference">
+                                <img src="img/icons/ok.png" alt="vk">
+                            </a>
+                        </li>
+                        <li class="footer-social__item">
+                            <a href="#" class="footer-social__reference">
+                                <img src="img/icons/yt.png" alt="vk">
+                            </a>
+                        </li>
+                        <li class="footer-social__item">
+                            <a href="#" class="footer-social__reference">
+                                <img src="img/icons/insta.png" alt="vk">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="footer__item footer__info">
+                <div class="footer__feedback">
+                    <a href="tel:88005006105" class="phone-number footer__phone">8 800 500-61-05</a>
+                    <span class="phone-label footer__phone-label">Круглосуточная поддержка</span>
+                </div>
+                <p class="footer__copyright">&copy; 2016 ООО &laquo;Городские Круизы&raquo;</p>
+            </li>
+        </ul>
+    </div>
+</footer>
+<script src="js/scripts.js"></script>
+</body>
+</html>

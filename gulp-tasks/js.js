@@ -13,6 +13,6 @@ gulp.task('scripts', function () {
 
 gulp.task('scripts:copy', function () {
     return gulp.src(['src/js/scripts.js'])
-        .pipe(uglify())
+        // .pipe(uglify()) don't work without babel
         .pipe(gulp.dest('dist/js'))
 });
